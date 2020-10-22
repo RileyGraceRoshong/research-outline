@@ -17,5 +17,6 @@ See also https://discord.gg/sdQURZX for Avi MD’s Discord server, which is dedi
 
 Finally, thanks to my Discord for assistance in compiling sources. https://discord.gg/rgr
 
-
-{% include toc.html html=content %}
+{content}
+{% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=0 h_max=3 %}
+{content}
