@@ -17,7 +17,7 @@ Research Outline
 * Finally, thanks to my Discord for assistance in compiling sources. <https://discord.gg/rgr>
 
 <ul>
-    {% for doc in site.pages %}
-        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endfor %}
+{% for doc in site.pages %}
+    <li><a href="{{ doc.url }}">{{ doc.url }}</a></li>
+{% endfor %}
 </ul>
