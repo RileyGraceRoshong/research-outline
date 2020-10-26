@@ -16,8 +16,13 @@ Research Outline
 
 * Finally, thanks to my Discord for assistance in compiling sources. <https://discord.gg/rgr>
 
-<ul>
-{% for doc in site.pages %}
-    <li><a href="{{ doc.url }}">{{ doc.url }}</a></li>
+{% assign mydocs = site.docs | group_by: 'category' %}
+{% for cat in mydocs %}
+<h2>{{ cat.name | capitalize }}</h2>
+    <ul>
+      {% assign items = cat.items | sort: 'order' %}
+      {% for item in items %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
 {% endfor %}
-</ul>
